@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+}
+.Header{
+    background-color: #C3CFD9;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    position: fixed;
+    left: 0;
+    text-align: center;
+    color: #E8833A;
+    font-size: 34px;
+    margin-bottom: 200px
+}
+.margin{
+    margin-top: 50px;
+}
