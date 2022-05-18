@@ -4,6 +4,7 @@ import Home from "./Home"
 import Header from "./Header"
 import MoviePage from "./MoviePage"
 import Seats from "./Seats"
+import "./style.css";
 import SuccessfulOrder from "./SuccessfulOrder"
 export default function App(){
     return(
@@ -12,7 +13,7 @@ export default function App(){
                 <Header />
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/Movie" element={<MoviePage />}/>    
+                <Route path="/Movie/:myID" element={<MoviePage />}/>    
                 <Route path="/Seats" element={<Seats />}/>
                 <Route path="/Success" element={<SuccessfulOrder />}/>     
                 </Routes>
