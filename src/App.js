@@ -7,6 +7,7 @@ import Seats from "./Seats"
 import "./style.css";
 import SuccessfulOrder from "./SuccessfulOrder"
 export default function App(){
+    const [screens,setScreens]=React.useState(1)
     return(
         <>
             <BrowserRouter>
@@ -14,7 +15,7 @@ export default function App(){
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/Movie/:myID" element={<MoviePage />}/>    
-                <Route path="/Seats" element={<Seats />}/>
+                <Route path="/Seats/:SeatID" element={<Seats changeScreen={item=>setScreens(item)}/>}/>
                 <Route path="/Success" element={<SuccessfulOrder />}/>     
                 </Routes>
             </BrowserRouter>

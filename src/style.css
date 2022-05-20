@@ -21,6 +21,10 @@
 .margin{
     margin-top: 50px;
 }
+.White{
+    color: #fff;
+    
+}
 .MoviesContainer{
     display: flex;
     flex-wrap: wrap;
@@ -38,4 +42,77 @@
     text-align: center;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
+}
+.HourBox{
+    width: 60px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+}
+.footer{
+    height: 117px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #DFE6ED;
+    border: 1px solid #9EADBA;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+.FooterImage{
+    height: 72px;
+    width: 48px;
+}
+.displayFlex{
+    display: flex;
+    justify-content: center;
+}
+.Roboto400{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #293845;
+}
+.HourBox:link{
+    text-decoration: none;
+}
+.ALignCenter{
+    display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.marginLeft{
+    margin-left: 10px;
+    text-align: center;
+}
+.seats{
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+    border-radius: 12px;
+    width: 26px;
+    margin: 5px;
+}
+.display{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    text-align: center;
+  
+}
+.seats2{
+    background-color: #F7C52B;
+    border-radius: 12px;
+    width: 26px;
+    margin: 5px;
+}
+.displayAndJustify{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.descriptiontext{
+    font-size: 13px;
 }
