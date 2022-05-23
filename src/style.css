@@ -52,14 +52,15 @@
     padding: 5px;
 }
 .footer{
-    height: 117px;
+   
     left: 0px;
     bottom: 0px;
     background-color: #DFE6ED;
     border: 1px solid #9EADBA;
     width: 100%;
-    display: flex;
+   
     padding: 20px;
+    position: fixed;
 }
 .FooterImage{
     height: 72px;
@@ -91,28 +92,129 @@
 .seats{
     background-color: #C3CFD9;
     border: 1px solid #808F9D;
-    border-radius: 12px;
+    border-radius: 50%;
     width: 26px;
+    height: 26px;
     margin: 5px;
+    cursor: pointer;
+    font-size: 9px;
+    align-items: center;
+    letter-spacing: 0.04em;
+   
 }
 .display{
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
     text-align: center;
-  
+   
 }
 .seats2{
     background-color: #F7C52B;
-    border-radius: 12px;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    margin: 5px;
+
+    cursor: pointer;
+    text-align: center;
+    font-size: 9px;
+    align-items: center;
+    letter-spacing: 0.04em;
+    border: 1px solid #F7C52B;
+}
+.seats3{
+    background-color: #1AAE9E;
+    border-radius: 50%;
+    border:1px solid #1AAE9E;
     width: 26px;
     margin: 5px;
+    height: 26px;
+    cursor: pointer;
+    font-size: 9px;
 }
+.seatsSelect{
+    background-color: #1AAE9E;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #1AAE9E;
+}
+.seatsAvailable{
+    background-color: #1AAE9E;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+}
+.seatsNotAvailable{
+    background-color: #F7C52B;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #F7C52B;
+}
+
+
 .displayAndJustify{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
+    
 }
 .descriptiontext{
-    font-size: 13px;
+    font-size: 9px;
+}
+
+form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    background-color: #E8833A;
+    color: #fff;
+    align-content: center;
+    margin-top: 20px;
+    width: 80%;
+    height: 42px;
+}
+.Roboto700{
+    color: #247A6B;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.center{
+    margin-top: 50px;
+    text-align: center;
+}
+.margin-rigth{
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+.MolduraBranca{
+    width: 64px;
+height: 90px;
+background-color: #fff;
+align-items: center;
+padding: 5px;
+}
+.DodisplayFlex{
+    display: flex;
+    margin-bottom: 0%;
+}
+.marginzero{
+    margin-right: 20%;
+    margin-top: 0%;
+    line-height: 2px;
 }

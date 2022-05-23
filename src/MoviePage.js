@@ -44,7 +44,7 @@ export default function MoviePage({setscreens}){
 
     return(
         <div className="ALignCenter">
-            <div className='margin'><h1 className="MovieSelectText">Selecione o Horário</h1></div>
+            <div className='margin ALignCenter'><h1 className="MovieSelectText">Selecione o Horário</h1></div>
            {date.map(item=>{
                return(
                    <DateHour weekday={item.weekday} date={item.date}>
