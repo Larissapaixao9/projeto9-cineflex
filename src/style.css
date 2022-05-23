@@ -51,6 +51,7 @@
     margin: 10px;
     text-align: center;
     padding: 5px;
+    
 }
 .footer{
    
@@ -59,7 +60,6 @@
     background-color: #DFE6ED;
     border: 1px solid #9EADBA;
     width: 100%;
-   
     padding: 20px;
     position: fixed;
 }
@@ -203,7 +203,7 @@ button{
     font-size: 24px;
 }
 .margin-rigth{
-    margin-right: 40px;
+    margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 30px;
 
@@ -242,4 +242,7 @@ label{
     font-weight: 700;
     font-size: 20px;
     color: #293845;
+}
+.HourBox:last-child{
+    margin-bottom: 40%;
 }

@@ -13,10 +13,10 @@ export default function SuccessfulOrder(){
                 <p>{title}</p>
                 <p>{date} -  {hour}</p>
                 <strong>   <p className='FontRoboto700'>ingressos</p></strong> 
-                <p >INGRESSOS {seat}</p>
+                <p className='Roboto400'>Assento 42 </p>
                 <strong>   <p className='FontRoboto700'>Comprador</p></strong> 
-                <p>Nome: {name}</p>
-                <p>CPF:{cpf} </p>
+                <p className='Roboto400'>Nome: {name}</p>
+                <p className='Roboto400'>CPF:{cpf} </p>
                 <Link to="/"><button >Voltar pra Home</button></Link>
             </div>
         </>

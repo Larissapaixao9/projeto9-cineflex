@@ -104,18 +104,22 @@ export default function Seats(){
             )
         }
     }
+    function NotAvailableCLickes(){
+        setClick([click+1])
+        if(click>=0){
+            alert('Esse assento não está disponível')
+        }
+    }
     
     function SeatRender2({name,isAvailable}){
         return(
             <div >
-                <div className='seats2' onClick={()=>setClick([click+1])}>{name}</div>
+                <div className='seats2' onClick={NotAvailableCLickes}>{name}</div>
                 </div>
         )
     }
 
-    if(click>=1){
-        alert('Esse assento não está disponível')
-    }
+
 
     return(
         <div>
