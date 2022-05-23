@@ -13,7 +13,7 @@ export default function SuccessfulOrder(){
                 <p>{title}</p>
                 <p>{date} -  {hour}</p>
                 <strong>   <p className='FontRoboto700'>ingressos</p></strong> 
-                <p className='Roboto400'>Assento 42 </p>
+                {seat.map(item=><p className='Roboto400'>Assento: {item} </p>)}
                 <strong>   <p className='FontRoboto700'>Comprador</p></strong> 
                 <p className='Roboto400'>Nome: {name}</p>
                 <p className='Roboto400'>CPF:{cpf} </p>

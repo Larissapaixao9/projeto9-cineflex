@@ -89,7 +89,7 @@ export default function Seats(){
     },[]
     )
     
-    function seatClicked(){
+    function seatClicked({name}){
         setSeatColor(seatColor=> !seatColor)
         console.log(seatColor)
        setSeat([...seat,name])
@@ -99,7 +99,7 @@ export default function Seats(){
         if(isAvailable==true){
             return(
                 <div >
-                    <div onClick={seatClicked} className={toggleClass}>{name}</div>
+                    <div onClick={()=>seatClicked({name})} className={toggleClass}>{name}</div>
                     </div> 
             )
         }
