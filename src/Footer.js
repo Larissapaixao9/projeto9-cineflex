@@ -5,7 +5,7 @@ export default function Footer({fonte,title,hour,day}){
           <div className="MolduraBranca"><img className="FooterImage" src={fonte} /></div> 
           <div ><p className="marginLeft Roboto400">{title} <br/> {day}  {hour}</p></div> 
           </div>
-         <div className="Roboto400 marginzero">{day}  {hour}</div>
+      
        </div>
     )
 }

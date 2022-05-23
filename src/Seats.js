@@ -15,12 +15,14 @@ export default function Seats(){
     const[showseats,setShowseats]=React.useState([])
     const [seatInfo2,setSeatInfo2]=React.useState({})
     const [seatInfo3,setSeatInfo3]=React.useState({})
+    const [seat,setSeat]=React.useState([])
     const[click,setClick]=React.useState([])
     const[click2,setClick2]=React.useState([0])
     const [name, setName] = React.useState('');
     const [cpf, setCpf] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [seatColor,setSeatColor]=React.useState(false);
+    let arr=[]
     const navigate=useNavigate()
 
     function SeatsDescription(){
@@ -28,18 +30,18 @@ export default function Seats(){
             <div className='displayAndJustify'>
                 <div className="margin-rigth">
                 
-                <div className=' seatsSelect '>.</div>
+                <div className=' seatsSelect '></div>
                 <div className='descriptiontext'>Selecionado</div>
                 </div>
                 <div className="margin-rigth">
                 
-                <div className='seatsAvailable'>.</div>
+                <div className='seatsAvailable'></div>
                 <div className='descriptiontext'>Disponível</div>
                 </div>
     
                 <div className="margin-rigth">
                 
-                <div className='seatsNotAvailable'>.</div>
+                <div className='seatsNotAvailable'></div>
                 <div className='descriptiontext'>Indisponível</div>
                 </div>
             </div>
@@ -61,7 +63,7 @@ export default function Seats(){
     })
     .then(response=>{
         console.log(response.data);
-        navigate("/Success",{state:{title:seatInfo.title,date:seatInfo3.date, hour:seatInfo2.name,name:name, cpf:cpf}} );
+        navigate("/Success",{state:{title:seatInfo.title,date:seatInfo3.date, hour:seatInfo2.name,name:name, cpf:cpf, seat:seat}} );
         
     })
   }
@@ -90,6 +92,7 @@ export default function Seats(){
     function seatClicked(){
         setSeatColor(seatColor=> !seatColor)
         console.log(seatColor)
+       setSeat([...seat,name])
     }
     let toggleClass=seatColor ? 'seats3' : 'seats';
     function SeatRender({name, isAvailable, click2}){
@@ -120,7 +123,7 @@ export default function Seats(){
             <div className='display'>
             {showseats.map(item=>{
                 return(
-                    item.isAvailable===true ?  <SeatRender  name={item.name} isAvailable={item.isAvailable}/> :  <SeatRender2 name={item.name} isAvailable={item.isAvailable}/>
+                    item.isAvailable===true ?  <SeatRender  name={item.name} isAvailable={item.isAvailable}/> :  <SeatRender2 name={item.name} isAvailable={item.isAvailable} />
                 )
             })}
             <SeatsDescription />
