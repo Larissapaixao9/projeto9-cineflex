@@ -9,9 +9,6 @@ import Form from "./Form";
 import SuccessfulOrder from "./SuccessfulOrder"
 
 
-
-
-
 export default function Seats(){
     const {SeatID}=useParams()
     const [seatInfo,setSeatInfo]=React.useState({})
@@ -97,9 +94,7 @@ export default function Seats(){
     let toggleClass=seatColor ? 'seats3' : 'seats';
     function SeatRender({name, isAvailable, click2}){
         if(isAvailable==true){
-            
             return(
-    
                 <div >
                     <div onClick={seatClicked} className={toggleClass}>{name}</div>
                     </div> 
@@ -113,8 +108,8 @@ export default function Seats(){
                 <div className='seats2' onClick={()=>setClick([click+1])}>{name}</div>
                 </div>
         )
-    
     }
+
     if(click>=1){
         alert('Esse assento não está disponível')
     }
@@ -132,9 +127,9 @@ export default function Seats(){
             <div className="AlignCenter">
         <form onSubmit={(e)=>submit(e)}>
             <label> Nome do comprador:</label>
-            <input required onChange={(e)=>Handle(e)} id="name" value={data.name} type="text" placeholder="Digite seu nome..." />
+            <input required minLength={3} onChange={(e)=>Handle(e)} id="name" value={data.name} type="text" placeholder="Digite seu nome..." />
             <label> CPF do comprador:</label>
-            <input required onChange={(e)=>Handle(e)} id="cpf" value={data.cpf} type="text" placeholder="Digite seu CPF..." />
+            <input required minLength={11} onChange={(e)=>Handle(e)} id="cpf" value={data.cpf} type="text" placeholder="Digite seu CPF..." />
             <button>Reservar assento(s)</button>
         </form>
         
