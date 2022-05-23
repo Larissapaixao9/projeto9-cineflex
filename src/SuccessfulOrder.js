@@ -4,6 +4,11 @@ import { useLocation, Link } from "react-router-dom"
 export default function SuccessfulOrder(){
     const myLocation=useLocation()
     const {title,date, hour,name, cpf,seat}=myLocation.state
+    if(seat.length===0){
+        return(
+            <h1 className='margin FontRoboto700'>Compra não aprovada. Por favor, selecione um assento disponível</h1>
+        )
+    }
     
     return(
         <>
@@ -13,7 +18,7 @@ export default function SuccessfulOrder(){
                 <p>{title}</p>
                 <p>{date} -  {hour}</p>
                 <strong>   <p className='FontRoboto700'>ingressos</p></strong> 
-                {seat.map(item=><p className='Roboto400'>Assento: {item} </p>)}
+                { seat.map(item=><p className='Roboto400'>Assento: {item} </p>)}
                 <strong>   <p className='FontRoboto700'>Comprador</p></strong> 
                 <p className='Roboto400'>Nome: {name}</p>
                 <p className='Roboto400'>CPF:{cpf} </p>

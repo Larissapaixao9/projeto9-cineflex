@@ -20,7 +20,6 @@ export default function Seats(){
     const[click2,setClick2]=React.useState([0])
     const [name, setName] = React.useState('');
     const [cpf, setCpf] = React.useState('');
-    const [password, setPassword] = React.useState('');
     const [seatColor,setSeatColor]=React.useState(false);
     let arr=[]
     const navigate=useNavigate()
@@ -57,7 +56,7 @@ export default function Seats(){
   function submit(e){
     e.preventDefault();
     axios.post('https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many',{
-        ids: seatInfo.id,
+        ids: seat,
         name:data.name,
         cpf:data.cpf
     })
