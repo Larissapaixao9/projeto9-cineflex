@@ -3,7 +3,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom"
 import { useLocation, Link } from "react-router-dom"
 export default function SuccessfulOrder(){
     const myLocation=useLocation()
-    const {title,date, hour}=myLocation.state
+    const {title,date, hour,name, cpf}=myLocation.state
     
     return(
         <>
@@ -15,8 +15,8 @@ export default function SuccessfulOrder(){
                 <strong>   <p>ingressos</p></strong> 
                 <p>INGRESSOS</p>
                 <strong>   <p>Comprador</p></strong> 
-                <p>Nome: </p>
-                <p>CPF: </p>
+                <p>Nome: {name}</p>
+                <p>CPF:{cpf} </p>
                 <Link to="/"><button >Voltar pra Home</button></Link>
             </div>
         </>

@@ -21,6 +21,7 @@ export default function Seats(){
     const[click,setClick]=React.useState([])
     const[click2,setClick2]=React.useState([0])
     const [name, setName] = React.useState('');
+    const [cpf, setCpf] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [seatColor,setSeatColor]=React.useState(false);
     const navigate=useNavigate()
@@ -63,13 +64,16 @@ export default function Seats(){
     })
     .then(response=>{
         console.log(response.data);
-        navigate("/Success",{state:{title:seatInfo.title,date:seatInfo3.date, hour:seatInfo2.name}} );
+        navigate("/Success",{state:{title:seatInfo.title,date:seatInfo3.date, hour:seatInfo2.name,name:name, cpf:cpf}} );
         
     })
   }
+ 
   function Handle(e){
     const newdata={...data}
     newdata[e.target.id]=e.target.value
+    setName(data.name)
+    setCpf(data.cpf)
     setData(newdata)
     console.log(newdata)
   }
